@@ -26,3 +26,16 @@ test('Should catch dot in front ', () => {
 		}).valid,
 	).toBe(false);
 });
+
+test('Should accept uppercase file extensions', () => {
+	expect(
+		validateOutnameGui({
+			outName: 'out/video.MP4',
+			codec: 'h264',
+			audioCodec: 'aac',
+			renderMode: 'video',
+			stillImageFormat: 'png',
+			separateAudioTo: null,
+		}).valid,
+	).toBe(true);
+});

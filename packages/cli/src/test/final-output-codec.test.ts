@@ -44,6 +44,8 @@ describe('Codec tests undefined codec input with known extension', () => {
 		['wav', 'wav'],
 		['aac', 'aac'],
 		['aac', 'm4a'],
+		['h264', 'MP4'],
+		['vp8', 'WebM'],
 	];
 	codecExtensionCombination.forEach((entry) =>
 		test(`${entry[1]} should be recognized as ${entry[0]}`, () => {
